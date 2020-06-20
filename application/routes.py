@@ -13,6 +13,17 @@ def get_song(song_path):
         tags = ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']
         
         genre = Song.run_network(song_path)
+
+        # song path does not exist
+        if genre==None:
+            return jsonify({
+            'status': 0,
+            'genre_id': None,
+            'song_path':song_path,
+            'message': 'Song does not exit in db'
+            })
+
+        
         new_song = Song(
             genre_id=str(tags[genre]),
             path=song_path

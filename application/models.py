@@ -6,6 +6,7 @@ from application.network.utils import extract_melgram
 import tensorflow as tf
 from tensorflow import keras
 from application.network.model import RCNN
+import os
 
 class Song(db.Model):
     __tablename__ = 'song'
@@ -30,7 +31,10 @@ class Song(db.Model):
 
         # load dataset and convert
         song_path = PARENT_PATH + path
-        X_test, num_frames_test= extract_melgram(song_path, MULTIFRAMES)
+        if os.path.exists(song_path):
+            X_test, num_frames_test= extract_melgram(song_path, MULTIFRAMES)
+        else:
+            return None
 
         # define model
         #model = RCNN()
