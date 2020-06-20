@@ -28,6 +28,7 @@ class Song(db.Model):
         LOAD_WEIGHTS = 1
         MULTIFRAMES = 0
         PARENT_PATH = 'dataset/test/'
+        PRETRAINED_MODEL_PATH = 'pretrained_model/'
 
         # load dataset and convert
         song_path = PARENT_PATH + path
@@ -40,7 +41,8 @@ class Song(db.Model):
         #model = RCNN()
         
         #load model and weight
-        model = keras.models.load_model('RCNN_model.h5')
+        model_path = PRETRAINED_MODEL_PATH + 'RCNN_model.h5'
+        model = keras.models.load_model(model_path)
 
         model.compile(optimizer='adam',
                       loss=tf.losses.SparseCategoricalCrossentropy(from_logits=True),
