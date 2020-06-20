@@ -24,5 +24,5 @@ Technology: Python 3.5+ with Flask and tensorflow2, and MySQL.
 
 ### Test: 
 >Hit url: [http://0.0.0.0:5001/[song_path]](http://0.0.0.0:5001/[song_path])
-Example: [http://0.0.0.0:5001/metal.00001.wav](http://0.0.0.0:5001/metal.00001.wav)
+Example: [http://0.0.0.0:5001/classical.00018.wav](http://0.0.0.0:5001/classical.00018.wav)
 Currently, the system merely classified songs in the folder dataset/set
