@@ -1,6 +1,6 @@
 
 # MGR system
-This code reproduces the work of **Albert Jiménez, Ferran José "MUSIC GENRE RECOGNITION WITH DEEP NEURAL NETWORKS".** 
+This code reproduces the work of **Albert Jiménez, Ferran José "MUSIC GENRE RECOGNITION WITH DEEP NEURAL NETWORKS".** and other models.
 
 ## Dataset 
 GTZAN dataset. It includes the tags of blues, classical, country, disco, hiphop, jazz, metal, pop, reggae, rock.
